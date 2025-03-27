@@ -1,90 +1,58 @@
 "use client";
 
-import Hero from '../components/Hero'
+import Hero from '@/components/Hero'
+import ContactForm from '@/components/ContactForm'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main>
+    <main className="min-h-screen bg-[rgb(8,29,50)]">
       <Hero />
       
-      {/* Featured Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+      {/* Value Proposition Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our Approach
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Transform Your Business with Digital Marketing
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              We combine creativity with data-driven insights to deliver exceptional results for our clients.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              We help businesses grow through strategic digital marketing solutions. 
+              Our data-driven approach delivers measurable results.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Stats Section */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {[
-              {
-                title: "Strategy First",
-                description: "We develop comprehensive strategies that align with your business goals and target audience.",
-                icon: "🎯"
-              },
-              {
-                title: "Data-Driven",
-                description: "Every decision is backed by data and analytics to ensure optimal performance.",
-                icon: "📊"
-              },
-              {
-                title: "Creative Excellence",
-                description: "We create compelling content that resonates with your audience and drives engagement.",
-                icon: "✨"
-              }
-            ].map((item, index) => (
+              { number: '200%', label: 'Average ROI' },
+              { number: '1M+', label: 'Leads Generated' },
+              { number: '50+', label: 'Happy Clients' },
+            ].map((stat, index) => (
               <motion.div
-                key={index}
+                key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 text-center"
               >
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
-                <p className="text-gray-700">{item.description}</p>
+                <div className="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-12 text-center text-white"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help you achieve your digital marketing goals.
-            </p>
-            <Link 
-              href="/contact" 
-              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Start Your Journey
-            </Link>
-          </motion.div>
+          {/* Contact Form Section */}
+          <div className="max-w-4xl mx-auto">
+            <ContactForm />
+          </div>
         </div>
       </section>
     </main>
