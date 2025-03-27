@@ -9,4 +9,16 @@ out/
 public/
 
 # Generated files
-*.generated.* 
+*.generated.*
+
+# TypeScript
+*.ts
+*.tsx
+
+# JavaScript
+*.js
+*.jsx
+
+# Config files
+*.config.js
+*.config.ts 

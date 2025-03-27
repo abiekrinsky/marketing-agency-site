@@ -4,9 +4,7 @@ const nextConfig = {
     domains: ['images.unsplash.com'],
   },
   experimental: {
-    serverActions: {
-      allowedOrigins: ['localhost:3000', 'vercel.app']
-    }
+    serverActions: true
   },
 };
 
