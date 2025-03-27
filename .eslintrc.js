@@ -1,6 +1,6 @@
 module.exports = {
   extends: 'next/core-web-vitals',
-  ignorePatterns: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
+  ignorePatterns: ['node_modules/', '.next/', 'out/'],
   rules: {
     'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-unused-vars': 'off'
