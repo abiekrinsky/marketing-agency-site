@@ -17,9 +17,8 @@ export default function WhyDigital() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Why Your Business Needs to Be Digital
           </h1>
-          <p className="text-xl text-gray-700 mb-8">
-            In today's connected world, your customers are online. If they can't find you there,
-            they're finding your competitors.
+          <p className="text-xl text-gray-300">
+            In today&apos;s digital age, your restaurant&apos;s online presence is just as important as your physical location. Let&apos;s explore why.
           </p>
         </motion.div>
       </section>

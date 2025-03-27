@@ -2,19 +2,16 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import AnimatedIcon from '../ui/AnimatedIcon'
 
 interface CaseStudyProps {
   title: string
   description: string
-  metrics: { label: string; value: string }[]
+  metrics: {
+    label: string
+    value: string
+  }[]
   image: string
-  testimonial: {
-    quote: string
-    author: string
-    role: string
-  }
-  index?: number
+  isReversed?: boolean
 }
 
 export default function CaseStudy({
@@ -22,100 +19,65 @@ export default function CaseStudy({
   description,
   metrics,
   image,
-  testimonial,
-  index = 0
+  isReversed = false
 }: CaseStudyProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ 
-        duration: 0.6,
-        delay: index * 0.2,
-        type: "spring",
-        stiffness: 100
-      }}
-      whileHover={{ y: -5 }}
-      className="bg-white rounded-lg shadow-lg overflow-hidden group"
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="p-8">
-          <motion.h2 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.2 + 0.2 }}
-            className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors"
-          >
-            {title}
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.2 + 0.3 }}
-            className="text-gray-700 mb-6"
-          >
-            {description}
-          </motion.p>
-          
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.2 + 0.4 }}
-            className="grid grid-cols-3 gap-4 mb-6"
-          >
-            {metrics.map((metric, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2 + 0.5 + i * 0.1 }}
-                className="group-hover:bg-blue-50 p-4 rounded-lg transition-colors"
-              >
-                <div className="text-2xl font-bold text-blue-600 group-hover:text-blue-700 transition-colors">{metric.value}</div>
-                <div className="text-sm text-gray-700">{metric.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          <motion.div 
+    <div className={`flex min-h-screen items-center py-20 ${isReversed ? 'bg-gray-50' : 'bg-white'}`}>
+      <div className="container mx-auto px-4">
+        <div className={`grid grid-cols-1 items-center gap-12 lg:grid-cols-2 ${isReversed ? 'lg:flex-row-reverse' : ''}`}>
+          {/* Content */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.2 + 0.8 }}
-            className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-lg relative overflow-hidden group"
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-            <p className="text-gray-700 italic mb-4 relative">"{testimonial.quote}"</p>
-            <div className="relative">
-              <p className="font-semibold text-gray-900">{testimonial.author}</p>
-              <p className="text-gray-700">{testimonial.role}</p>
+            <h2 className="text-4xl font-bold text-gray-900 md:text-5xl">
+              {title}
+            </h2>
+            <p className="text-lg text-gray-700">
+              {description}
+            </p>
+            <div className="grid grid-cols-2 gap-8">
+              {metrics.map((metric, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: i * 0.2 }}
+                >
+                  <p className="text-4xl font-bold text-blue-600">
+                    {metric.value}
+                  </p>
+                  <p className="text-lg text-gray-600">
+                    {metric.label}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
-        </div>
 
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: index * 0.2 + 0.6 }}
-          className="relative h-[400px] md:h-auto overflow-hidden group"
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity z-10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10" />
-          <Image
-            src={image}
-            alt={title}
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
-            priority
-          />
-        </motion.div>
+          {/* Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="group relative h-[400px] overflow-hidden rounded-2xl lg:h-[600px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 transition-opacity group-hover:opacity-100 z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity group-hover:opacity-100 z-10" />
+            <Image
+              src={image}
+              alt={`${title} case study`}
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+          </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   )
 } 

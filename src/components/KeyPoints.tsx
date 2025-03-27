@@ -70,7 +70,7 @@ export default function KeyPoints() {
                     <h3 className="text-3xl font-bold text-white mb-4">LOCAL DISCOVERY</h3>
                     <p className="text-xl text-gray-300">
                       93% of diners check online menus before eating out. Without a strong digital presence, 
-                      you're invisible to thousands of potential customers searching for restaurants like yours every day.
+                      you&apos;re invisible to thousands of potential customers searching for restaurants like yours every day.
                     </p>
                   </div>
                 </motion.div>

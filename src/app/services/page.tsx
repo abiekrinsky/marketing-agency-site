@@ -13,6 +13,7 @@ import {
   PresentationChartLineIcon
 } from '@heroicons/react/24/outline'
 import { useRef } from 'react'
+import Image from 'next/image'
 
 const services = [
   {
@@ -129,33 +130,38 @@ export default function Services() {
       <ScrollProgress />
       
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl mx-auto"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Transform Your Business with Digital Excellence
-            </h1>
-            <p className="text-xl text-gray-700 mb-8">
-              Our comprehensive suite of digital services helps businesses thrive in the modern digital landscape.
-            </p>
+      <section className="relative min-h-[60vh] bg-gradient-to-br from-blue-900 to-blue-950 py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center lg:text-left"
             >
-              <a
-                href="#contact"
-                className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Get Started
-              </a>
+              <h1 className="mb-6 text-4xl font-bold text-white md:text-6xl">
+                Our Services
+              </h1>
+              <p className="text-xl text-gray-300">
+                Elevate your restaurant&apos;s digital presence with our comprehensive suite of services.
+                From social media management to website optimization, we&apos;ve got you covered.
+              </p>
             </motion.div>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative h-[300px] lg:h-[400px]"
+            >
+              <Image
+                src="/images/services/marketing.jpg"
+                alt="Digital Marketing Services"
+                fill
+                className="rounded-lg object-cover"
+                priority
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
