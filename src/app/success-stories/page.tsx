@@ -18,7 +18,7 @@ export default function SuccessStories() {
             Success Stories
           </h1>
           <p className="text-xl text-gray-700">
-            Real results from real businesses. See how we've helped others grow their digital presence.
+            Discover how we&apos;ve helped businesses achieve remarkable growth through digital marketing.
           </p>
         </motion.div>
       </section>
@@ -92,7 +92,7 @@ export default function SuccessStories() {
             Ready to Create Your Success Story?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-100">
-            Let's discuss how we can help your business achieve similar results.
+            We&apos;ve helped businesses achieve remarkable growth through digital marketing.
           </p>
           <motion.a
             href="/contact"

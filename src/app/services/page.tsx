@@ -7,8 +7,7 @@ import ServiceCarousel from '@/components/services/ServiceCarousel'
 import { 
   ChartBarIcon, 
   MegaphoneIcon, 
-  CodeBracketIcon, 
-  RocketLaunchIcon,
+  CodeBracketIcon,
   LightBulbIcon,
   PresentationChartLineIcon
 } from '@heroicons/react/24/outline'
@@ -28,6 +27,8 @@ const services = [
     ],
     icon: <ChartBarIcon />,
     image: "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&q=100&w=3840",
+    link: "/services/digital-strategy",
+    gradient: "bg-gradient-to-br from-blue-500/20 to-purple-500/20",
     successStory: {
       title: "E-commerce Growth Strategy",
       description: "Helped a retail client increase online sales by 200% through comprehensive digital strategy.",
@@ -48,6 +49,8 @@ const services = [
     icon: <MegaphoneIcon />,
     image: "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=100&w=3840",
     isReversed: true,
+    link: "/services/digital-marketing",
+    gradient: "bg-gradient-to-br from-blue-500/20 to-purple-500/20",
     successStory: {
       title: "Social Media Campaign",
       description: "Launched a viral social media campaign that reached 1M+ potential customers.",
@@ -67,6 +70,8 @@ const services = [
     ],
     icon: <CodeBracketIcon />,
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=100&w=3840",
+    link: "/services/web-development",
+    gradient: "bg-gradient-to-br from-blue-500/20 to-purple-500/20",
     successStory: {
       title: "E-commerce Platform",
       description: "Built a custom e-commerce platform that increased conversion rate by 75%.",
@@ -87,6 +92,8 @@ const services = [
     icon: <LightBulbIcon />,
     image: "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&q=100&w=3840",
     isReversed: true,
+    link: "/services/brand-strategy",
+    gradient: "bg-gradient-to-br from-blue-500/20 to-purple-500/20",
     successStory: {
       title: "Brand Transformation",
       description: "Transformed a traditional brand into a modern digital presence.",
@@ -106,6 +113,8 @@ const services = [
     ],
     icon: <PresentationChartLineIcon />,
     image: "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=100&w=3840",
+    link: "/services/analytics-reporting",
+    gradient: "bg-gradient-to-br from-blue-500/20 to-purple-500/20",
     successStory: {
       title: "Data-Driven Optimization",
       description: "Implemented analytics that increased marketing efficiency by 120%.",
@@ -181,7 +190,6 @@ export default function Services() {
         <div key={service.title} ref={(el) => { serviceRefs.current[index] = el }}>
           <ServiceModule
             {...service}
-            index={index}
           />
         </div>
       ))}

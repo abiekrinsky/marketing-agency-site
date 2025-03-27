@@ -12,6 +12,12 @@ interface CaseStudyProps {
   }[]
   image: string
   isReversed?: boolean
+  testimonial?: {
+    quote: string
+    author: string
+    role: string
+  }
+  index?: number
 }
 
 export default function CaseStudy({
@@ -19,7 +25,8 @@ export default function CaseStudy({
   description,
   metrics,
   image,
-  isReversed = false
+  isReversed = false,
+  testimonial
 }: CaseStudyProps) {
   return (
     <div className={`flex min-h-screen items-center py-20 ${isReversed ? 'bg-gray-50' : 'bg-white'}`}>
@@ -57,6 +64,23 @@ export default function CaseStudy({
                 </motion.div>
               ))}
             </div>
+            {testimonial && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="bg-gray-50 p-6 rounded-lg"
+              >
+                <p className="text-lg text-gray-700 italic mb-4">
+                  &quot;{testimonial.quote}&quot;
+                </p>
+                <div>
+                  <p className="font-semibold text-gray-900">{testimonial.author}</p>
+                  <p className="text-gray-600">{testimonial.role}</p>
+                </div>
+              </motion.div>
+            )}
           </motion.div>
 
           {/* Image */}

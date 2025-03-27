@@ -32,11 +32,11 @@ export default function Hero() {
               </h1>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
                 You Just Found Your New Partner For Digital Marketing Fueled 
-                </h2>
-                <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"><p>🚀 Growth 🚀</p></h1>
+              </h2>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"><p>🚀 Growth 🚀</p></h1>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Transform your business with our proven digital marketing strategies. 
-                I've delivered measurable results that drive growth and revenue.
+                I&apos;ve delivered measurable results that drive growth and revenue.
               </p>
               
               {/* Certification Badges */}

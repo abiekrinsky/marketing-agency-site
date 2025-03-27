@@ -45,7 +45,7 @@ export default function BouncingHeadshot() {
       <div className="relative h-48 w-48 overflow-hidden rounded-full bg-white/10 backdrop-blur-md">
         <Image
           src="/images/abie-headshot.jpeg"
-          alt="Abie's headshot"
+          alt="Abie&apos;s headshot"
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

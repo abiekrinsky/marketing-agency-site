@@ -37,7 +37,7 @@ export default function WhyDigital() {
             <h2 className="text-2xl font-bold mb-4 text-gray-900">Why Being Online Matters</h2>
             <p className="text-gray-700 mb-6">
               Most customers now discover businesses through Google, Instagram, and TikTok.
-              Having a strong online presence is no longer optional—it's essential for growth.
+              Having a strong online presence is no longer optional—it&apos;s essential for growth.
             </p>
             <ul className="space-y-3 text-gray-700">
               <li>• 97% of consumers search online for local businesses</li>
@@ -101,7 +101,7 @@ export default function WhyDigital() {
             Ready to Build Your Digital Presence?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-100">
-            Let's create a digital strategy that works for your business.
+            Let&apos;s create a digital strategy that works for your business.
             Book your free consultation today.
           </p>
           <a

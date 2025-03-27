@@ -15,7 +15,7 @@ export default function Contact() {
           className="max-w-4xl mx-auto text-center"
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Let's Talk About Your Digital Growth
+            Let&apos;s Talk About Your Digital Growth
           </h1>
           <p className="text-xl text-gray-700 mb-8">
             Schedule a free consultation to discuss how we can help your business thrive in the digital world.
@@ -142,7 +142,7 @@ export default function Contact() {
               <h2 className="text-2xl font-bold mb-6 text-gray-900">What to Expect</h2>
               <div className="space-y-4">
                 <p className="text-gray-900">
-                  During your free consultation, we'll:
+                  During your free consultation, we&apos;ll:
                 </p>
                 <ul className="space-y-3 text-gray-700">
                   <li>• Review your current digital presence</li>
