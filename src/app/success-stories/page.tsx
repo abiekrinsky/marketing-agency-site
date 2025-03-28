@@ -100,7 +100,7 @@ export default function SuccessStories() {
             whileTap={{ scale: 0.95 }}
             className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Let's Create Your Success Story →
+            Let&apos;s Create Your Success Story →
           </motion.a>
         </motion.div>
       </section>

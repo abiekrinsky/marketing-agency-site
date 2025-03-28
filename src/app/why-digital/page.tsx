@@ -108,7 +108,7 @@ export default function WhyDigital() {
             href="/contact"
             className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Let's Build Your Digital Presence →
+            Let&apos;s Build Your Digital Presence →
           </a>
         </motion.div>
       </section>
