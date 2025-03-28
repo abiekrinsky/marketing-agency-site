@@ -151,9 +151,8 @@ export default function Services() {
               <h1 className="mb-6 text-4xl font-bold text-white md:text-6xl">
                 Our Services
               </h1>
-              <p className="text-xl text-gray-300">
-                Elevate your restaurant&apos;s digital presence with our comprehensive suite of services.
-                From social media management to website optimization, we&apos;ve got you covered.
+              <p className="text-xl text-gray-700">
+                We&apos;ve helped businesses achieve remarkable growth through digital marketing.
               </p>
             </motion.div>
             <motion.div
