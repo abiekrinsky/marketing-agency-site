@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import ScrollProgress from '@/components/ui/ScrollProgress'
 import ServiceModule from '@/components/services/ServiceModule'
-import ServiceCarousel from '@/components/services/ServiceCarousel'
 import { 
   ChartBarIcon, 
   MegaphoneIcon, 
@@ -26,15 +25,9 @@ const services = [
       "Regular strategy optimization"
     ],
     icon: <ChartBarIcon />,
-    image: "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&q=100&w=3840",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=100&w=3840",
     link: "/services/digital-strategy",
-    gradient: "bg-gradient-to-br from-blue-500/20 to-purple-500/20",
-    successStory: {
-      title: "E-commerce Growth Strategy",
-      description: "Helped a retail client increase online sales by 200% through comprehensive digital strategy.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=100&w=3840",
-      metrics: "200% increase in online sales • 150% ROI • 3x customer acquisition"
-    }
+    gradient: "bg-gradient-to-br from-blue-500/20 to-purple-500/20"
   },
   {
     title: "Digital Marketing",
@@ -47,16 +40,10 @@ const services = [
       "Paid advertising optimization"
     ],
     icon: <MegaphoneIcon />,
-    image: "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=100&w=3840",
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=100&w=3840",
     isReversed: true,
     link: "/services/digital-marketing",
-    gradient: "bg-gradient-to-br from-blue-500/20 to-purple-500/20",
-    successStory: {
-      title: "Social Media Campaign",
-      description: "Launched a viral social media campaign that reached 1M+ potential customers.",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=100&w=3840",
-      metrics: "1M+ reach • 50% engagement rate • 300% follower growth"
-    }
+    gradient: "bg-gradient-to-br from-blue-500/20 to-purple-500/20"
   },
   {
     title: "Web Development",
@@ -71,13 +58,7 @@ const services = [
     icon: <CodeBracketIcon />,
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=100&w=3840",
     link: "/services/web-development",
-    gradient: "bg-gradient-to-br from-blue-500/20 to-purple-500/20",
-    successStory: {
-      title: "E-commerce Platform",
-      description: "Built a custom e-commerce platform that increased conversion rate by 75%.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=100&w=3840",
-      metrics: "75% higher conversion rate • 2x faster load time • 40% more sales"
-    }
+    gradient: "bg-gradient-to-br from-blue-500/20 to-purple-500/20"
   },
   {
     title: "Brand Strategy",
@@ -90,16 +71,10 @@ const services = [
       "Brand guidelines"
     ],
     icon: <LightBulbIcon />,
-    image: "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&q=100&w=3840",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=100&w=3840",
     isReversed: true,
     link: "/services/brand-strategy",
-    gradient: "bg-gradient-to-br from-blue-500/20 to-purple-500/20",
-    successStory: {
-      title: "Brand Transformation",
-      description: "Transformed a traditional brand into a modern digital presence.",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=100&w=3840",
-      metrics: "85% brand recognition • 60% market share increase • 2x brand value"
-    }
+    gradient: "bg-gradient-to-br from-blue-500/20 to-purple-500/20"
   },
   {
     title: "Analytics & Reporting",
@@ -112,27 +87,14 @@ const services = [
       "Actionable insights"
     ],
     icon: <PresentationChartLineIcon />,
-    image: "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=100&w=3840",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=100&w=3840",
     link: "/services/analytics-reporting",
-    gradient: "bg-gradient-to-br from-blue-500/20 to-purple-500/20",
-    successStory: {
-      title: "Data-Driven Optimization",
-      description: "Implemented analytics that increased marketing efficiency by 120%.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=100&w=3840",
-      metrics: "120% efficiency increase • 40% cost reduction • 3x ROI"
-    }
+    gradient: "bg-gradient-to-br from-blue-500/20 to-purple-500/20"
   }
 ]
 
 export default function Services() {
   const serviceRefs = useRef<(HTMLDivElement | null)[]>([])
-
-  const handleServiceClick = (index: number) => {
-    const targetRef = serviceRefs.current[index]
-    if (targetRef) {
-      targetRef.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-  }
 
   return (
     <main className="relative">
@@ -151,8 +113,8 @@ export default function Services() {
               <h1 className="mb-6 text-4xl font-bold text-white md:text-6xl">
                 Our Services
               </h1>
-              <p className="text-xl text-gray-700">
-                We&apos;ve helped businesses achieve remarkable growth through digital marketing.
+              <p className="text-xl text-gray-300">
+                Here&apos;s how we can help pack your restaurant with new customers!
               </p>
             </motion.div>
             <motion.div
@@ -162,8 +124,8 @@ export default function Services() {
               className="relative h-[300px] lg:h-[400px]"
             >
               <Image
-                src="/images/services/marketing.jpg"
-                alt="Digital Marketing Services"
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=100&w=3840"
+                alt="Professional Marketing Team"
                 fill
                 className="rounded-lg object-cover"
                 priority
@@ -173,25 +135,20 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Service Carousel */}
-      <ServiceCarousel
-        services={services.map(({ title, subtitle, icon, successStory }) => ({ 
-          title, 
-          subtitle, 
-          icon, 
-          successStory 
-        }))}
-        onServiceClick={handleServiceClick}
-      />
-
       {/* Services Modules */}
-      {services.map((service, index) => (
-        <div key={service.title} ref={(el) => { serviceRefs.current[index] = el }}>
-          <ServiceModule
-            {...service}
-          />
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="space-y-20">
+            {services.map((service, index) => (
+              <div key={service.title} ref={(el) => { serviceRefs.current[index] = el }}>
+                <ServiceModule
+                  {...service}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-600 text-white">

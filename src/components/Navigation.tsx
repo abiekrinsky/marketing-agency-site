@@ -19,6 +19,9 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
+            <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">
+              Home
+            </Link>
             <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">
               Services
             </Link>
@@ -56,6 +59,13 @@ export default function Navigation() {
           className="md:hidden overflow-hidden"
         >
           <div className="py-4 space-y-4">
+            <Link 
+              href="/" 
+              className="block text-gray-700 hover:text-blue-600 transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Home
+            </Link>
             <Link 
               href="/services" 
               className="block text-gray-700 hover:text-blue-600 transition-colors"

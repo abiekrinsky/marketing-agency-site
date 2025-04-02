@@ -15,7 +15,7 @@ const modules = [
   {
     title: "Case Studies",
     description: "See how we've helped restaurants achieve remarkable growth.",
-    image: "/images/services/analytics.jpg",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=100&w=3840",
     link: "/case-studies",
     gradient: "from-green-600/20 to-blue-600/20"
   },
